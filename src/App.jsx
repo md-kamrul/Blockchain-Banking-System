@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <h1>Blockchain Banking System</h1>
+      <h1 className='text-black'>Blockchain Banking System</h1>
     </>
   )
 }
