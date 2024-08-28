@@ -4,6 +4,7 @@ import {
 import Main from "../layout/Main";
 import Login from "../pages/Login";
 import BankerDashboard from "../pages/BankerDashboard";
+import BankerOverview from "../pages/BankerOverview";
 
 export const router = createBrowserRouter([
     {
@@ -14,10 +15,16 @@ export const router = createBrowserRouter([
                 path: '/',
                 element: <Login></Login>
             },
-            {
-                path: '/banker/overview',
-                element: <BankerDashboard></BankerDashboard>
-            }
         ]
     },
+    {
+        path: '/banker',
+        element: <BankerDashboard></BankerDashboard>,
+        children: [
+            {
+                path: '/banker/overview',
+                element: <BankerOverview></BankerOverview>
+            }
+        ]
+    }
 ]);
